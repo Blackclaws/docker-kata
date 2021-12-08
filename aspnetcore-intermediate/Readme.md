@@ -22,14 +22,26 @@ Secret storage path is read from
 ```json
 {
   "Secret": {
-    "SecretPath": 10
+    "SecretPath": "/pathToDir"
   }
 }
 ```
 
+# Test it
+```shell
+curl localhost:port/builtin
+curl localhost:port/persistent
+```
 
 # Exercise
 
 Create a Dockerfile that builds this application and can be deployed as an image. By default it should listen on port 8080.
 
 Secrets must not be kept in Dockerfile
+
+Hint:
+
+Dotnet Images that can be used are:
+
+mcr.microsoft.com/dotnet/sdk:6.0 for the SDK
+mcr.microsoft.com/dotnet/aspnet:6.0 for the runtime (smaller)

@@ -26,9 +26,20 @@ This application has a very simple configuration. You can change the amount of f
 }
 ```
 
+# Test it
+```shell
+curl localhost:port/WeatherForecast
+```
 
 # Exercise
 
 Create a Dockerfile that builds this application and can be deployed as an image. By default it should listen on port 8080.
 
 The default amount of forecasts should be 5.
+
+Hint:
+
+Dotnet Images that can be used are:
+
+mcr.microsoft.com/dotnet/sdk:6.0 for the SDK
+mcr.microsoft.com/dotnet/aspnet:6.0 for the runtime (smaller)
